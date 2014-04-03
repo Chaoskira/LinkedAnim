@@ -24,7 +24,11 @@ if (function_exists('ini_set')) {
 
 	// the following line differs from its sibling
 	// /app/Console/cake.php
+<<<<<<< HEAD
 	ini_set('include_path', $root . PATH_SEPARATOR . 'C:' . $ds . 'wamp' . $ds . 'www' . $ds . 'LinkedAnim' . $ds . 'lib' . PATH_SEPARATOR . ini_get('include_path'));
+=======
+	ini_set('include_path', $root . PATH_SEPARATOR . 'C:' . $ds . 'wamp' . $ds . 'www' . $ds . 'digisquare' . $ds . 'lib' . PATH_SEPARATOR . ini_get('include_path'));
+>>>>>>> 38818a251c12b30972598064cc83ac7ce9d51276
 }
 
 if (!include $dispatcher) {
