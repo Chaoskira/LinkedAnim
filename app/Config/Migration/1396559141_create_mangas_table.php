@@ -32,6 +32,7 @@ class CreateMangasTable extends CakeMigration {
 					'coverage' => array('type' => 'binary', 'null' => false, 'default' => null),
 					'tome_number' => array('type' => 'integer', 'null' => false, 'default' => null, 'length' => 3),
 					'table_authors_id' => array('type' => 'integer', 'null' => false, 'default' => null, 'length' => 5),
+					'status' => array('type' => 'string', 'null' => false, 'default' => null, 'length' => 25),
 					'indexes' => array(
 						'PRIMARY' => array('column' => 'id', 'unique' => 1),
 					),

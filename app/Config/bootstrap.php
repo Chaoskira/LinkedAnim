@@ -98,6 +98,6 @@ CakeLog::config('error', array(
 ));
 
 CakePlugin::load('Migrations', array(
-	'bootstrap' => true, 
-	'routes' => true
+'bootstrap' => true, 
+'routes' => true
 ));

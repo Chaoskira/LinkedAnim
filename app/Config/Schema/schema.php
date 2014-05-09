@@ -40,8 +40,8 @@ class AppSchema extends CakeSchema {
 
 	public $links = array(
 		'id' => array('type' => 'integer', 'null' => false, 'default' => null, 'length' => 5, 'key' => 'primary'),
-		'table_mangas_id1' => array('type' => 'integer', 'null' => false, 'default' => null, 'length' => 5),
-		'table_mangas_id2' => array('type' => 'integer', 'null' => false, 'default' => null, 'length' => 5),
+		'mangas_id' => array('type' => 'integer', 'null' => false, 'default' => null, 'length' => 5),
+		'mid' => array('type' => 'integer', 'null' => false, 'default' => null, 'length' => 5),
 		'number' => array('type' => 'integer', 'null' => false, 'default' => null, 'length' => 5),
 		'indexes' => array(
 			'PRIMARY' => array('column' => 'id', 'unique' => 1)
@@ -53,18 +53,19 @@ class AppSchema extends CakeSchema {
 		'id' => array('type' => 'integer', 'null' => false, 'default' => null, 'length' => 5, 'key' => 'primary'),
 		'name' => array('type' => 'string', 'null' => false, 'default' => null, 'length' => 50, 'collate' => 'utf8_general_ci', 'charset' => 'utf8'),
 		'origin_name' => array('type' => 'string', 'null' => false, 'default' => null, 'length' => 50, 'collate' => 'utf8_general_ci', 'charset' => 'utf8'),
-		'table_editions_id' => array('type' => 'integer', 'null' => false, 'default' => null, 'length' => 5),
-		'table_types_id' => array('type' => 'integer', 'null' => false, 'default' => null, 'length' => 5),
-		'table_kinds_id1' => array('type' => 'integer', 'null' => false, 'default' => null, 'length' => 5),
-		'table_kinds_id2' => array('type' => 'integer', 'null' => false, 'default' => null, 'length' => 5),
-		'table_kinds_id3' => array('type' => 'integer', 'null' => false, 'default' => null, 'length' => 5),
+		'editions_id' => array('type' => 'integer', 'null' => false, 'default' => null, 'length' => 5),
+		'types_id' => array('type' => 'integer', 'null' => false, 'default' => null, 'length' => 5),
 		'start_date' => array('type' => 'date', 'null' => false, 'default' => null),
 		'end_date' => array('type' => 'date', 'null' => false, 'default' => null),
 		'season_number' => array('type' => 'integer', 'null' => false, 'default' => null, 'length' => 2),
 		'episode_number' => array('type' => 'integer', 'null' => false, 'default' => null, 'length' => 3),
 		'coverage' => array('type' => 'binary', 'null' => false, 'default' => null),
 		'tome_number' => array('type' => 'integer', 'null' => false, 'default' => null, 'length' => 3),
-		'table_authors_id' => array('type' => 'integer', 'null' => false, 'default' => null, 'length' => 5),
+		'authors_id' => array('type' => 'integer', 'null' => false, 'default' => null, 'length' => 5),
+		'status' => array('type' => 'string', 'null' => false, 'default' => null, 'length' => 25, 'collate' => 'utf8_general_ci', 'charset' => 'utf8'),
+		'kinds_id' => array('type' => 'integer', 'null' => false, 'default' => null, 'length' => 5),
+		'kid' => array('type' => 'string', 'null' => false, 'default' => null, 'length' => 25, 'collate' => 'utf8_general_ci', 'charset' => 'utf8'),
+		'kids' => array('type' => 'string', 'null' => false, 'default' => null, 'length' => 25, 'collate' => 'utf8_general_ci', 'charset' => 'utf8'),
 		'indexes' => array(
 			'PRIMARY' => array('column' => 'id', 'unique' => 1)
 		),
@@ -73,7 +74,7 @@ class AppSchema extends CakeSchema {
 
 	public $ratings = array(
 		'id' => array('type' => 'integer', 'null' => false, 'default' => null, 'length' => 5, 'key' => 'primary'),
-		'table_mangas' => array('type' => 'integer', 'null' => false, 'default' => null, 'length' => 5),
+		'mangas_id' => array('type' => 'integer', 'null' => false, 'default' => null, 'length' => 5),
 		'rating' => array('type' => 'integer', 'null' => false, 'default' => null, 'length' => 2),
 		'indexes' => array(
 			'PRIMARY' => array('column' => 'id', 'unique' => 1)
