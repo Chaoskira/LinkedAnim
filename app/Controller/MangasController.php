@@ -114,4 +114,12 @@ class MangasController extends AppController {
 			$this->Session->setFlash(__('The manga could not be deleted. Please, try again.'));
 		}
 		return $this->redirect(array('action' => 'index'));
+	}
+	
+	
+	
+	
+	
+	public function genre($id){
+		return $this->Kind->find('first', array('conditions'=>array('kinds_id'=>$id)));
 	}}

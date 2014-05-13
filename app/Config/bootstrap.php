@@ -97,7 +97,7 @@ CakeLog::config('error', array(
 	'file' => 'error',
 ));
 
-CakePlugin::load('Migrations', array(
-'bootstrap' => true, 
-'routes' => true
-));
+//CakePlugin::load('Migrations', array(
+//'bootstrap' => true, 
+//'routes' => true
+//));
