@@ -1,24 +1,18 @@
 <div class="editions view">
-<h2><?php echo __('Edition'); ?></h2>
-	<dl>
-		<dt><?php echo __('Id'); ?></dt>
-		<dd>
-			<?php echo h($edition['Edition']['id']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Name'); ?></dt>
-		<dd>
-			<?php echo h($edition['Edition']['name']); ?>
-			&nbsp;
-		</dd>
-	</dl>
+	<div class="page-header">
+		<h1 class= "center"><?php echo __(h($edition['Edition']['name'])); ?></h1>
+	</div>
+	<div class="col-md-12">
+		<div class="col-md-8">
+			<div class = "row">
+				<div class="col-md-3">Id :</div>
+				<div class="col-md-1"><?php echo h($edition['Edition']['id']); ?>&nbsp;</div>
+			</div>
+			<div class = "row">
+				<div class="col-md-3">Nom :</div>
+				<div class="col-md-1"><?php echo h($edition['Edition']['name']); ?>&nbsp;</div>
+			</div>
+		</div>
+	</div>
 </div>
-<div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
-	<ul>
-		<li><?php echo $this->Html->link(__('Edit Edition'), array('action' => 'edit', $edition['Edition']['id'])); ?> </li>
-		<li><?php echo $this->Form->postLink(__('Delete Edition'), array('action' => 'delete', $edition['Edition']['id']), null, __('Are you sure you want to delete # %s?', $edition['Edition']['id'])); ?> </li>
-		<li><?php echo $this->Html->link(__('List Editions'), array('action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Edition'), array('action' => 'add')); ?> </li>
-	</ul>
-</div>
+
