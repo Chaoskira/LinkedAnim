@@ -22,6 +22,7 @@ class CreateAuthorsTable extends CakeMigration {
 					'first_name' => array('type' => 'string', 'null' => false, 'default' => null, 'length' => 50, 'collate' => 'utf8_general_ci', 'charset' => 'utf8'),
 					'birthdate' => array('type' => 'date', 'null' => false, 'default' => null),
 					'gender' => array('type' => 'boolean', 'null' => false, 'default' => null),
+					'image' => array('type' => 'string', 'null' => false, 'default' => null, 'length' => 500, 'collate' => 'utf8_general_ci', 'charset' => 'utf8'),
 					'indexes' => array(
 						'PRIMARY' => array('column' => 'id', 'unique' => 1),
 					),
