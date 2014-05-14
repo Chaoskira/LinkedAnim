@@ -15,7 +15,7 @@
 		</tr>
 		<?php foreach ($mangas as $manga): ?>
 		<tr>
-			<td><?php echo h($manga['Manga']['coverage']); ?>&nbsp;</td>
+			<td><img src = "<?php echo h($manga['Manga']['coverage']); ?>" class = "images"/>&nbsp;</td>
 			<td><?php echo h($manga['Manga']['name']); ?>&nbsp;</td>
 			<td><?php echo h($manga['Manga']['origin_name']); ?>&nbsp;</td>
 			<td>

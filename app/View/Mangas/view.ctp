@@ -83,20 +83,3 @@
 		</dd>
 	</dl>
 </div>
-<div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
-	<ul>
-		<li><?php echo $this->Html->link(__('Edit Manga'), array('action' => 'edit', $manga['Manga']['id'])); ?> </li>
-		<li><?php echo $this->Form->postLink(__('Delete Manga'), array('action' => 'delete', $manga['Manga']['id']), null, __('Are you sure you want to delete # %s?', $manga['Manga']['id'])); ?> </li>
-		<li><?php echo $this->Html->link(__('List Mangas'), array('action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Manga'), array('action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Editions'), array('controller' => 'editions', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Editions'), array('controller' => 'editions', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Types'), array('controller' => 'types', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Types'), array('controller' => 'types', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Authors'), array('controller' => 'authors', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Authors'), array('controller' => 'authors', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Kinds'), array('controller' => 'kinds', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Kinds'), array('controller' => 'kinds', 'action' => 'add')); ?> </li>
-	</ul>
-</div>
