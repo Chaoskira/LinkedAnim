@@ -1,24 +1,18 @@
 <div class="kinds view">
-<h2><?php echo __('Kind'); ?></h2>
-	<dl>
-		<dt><?php echo __('Id'); ?></dt>
-		<dd>
-			<?php echo h($kind['Kind']['id']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Name'); ?></dt>
-		<dd>
-			<?php echo h($kind['Kind']['name']); ?>
-			&nbsp;
-		</dd>
-	</dl>
+	<div class="page-header">
+		<h1 class= "center"><?php echo __(h($kind['Kind']['name'])); ?></h1>
+	</div>
+	<div class="col-md-12">
+		<div class="col-md-8">
+			<div class = "row">
+				<div class="col-md-3">Id :</div>
+				<div class="col-md-1"><?php echo h($kind['Kind']['id']); ?></div>
+			</div>
+			<div class = "row">
+				<div class="col-md-3">Nom :</div>
+				<div class="col-md-1"><?php echo h($kind['Kind']['name']); ?></div>
+			</div>
+		</div>
+	</div>
 </div>
-<div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
-	<ul>
-		<li><?php echo $this->Html->link(__('Edit Kind'), array('action' => 'edit', $kind['Kind']['id'])); ?> </li>
-		<li><?php echo $this->Form->postLink(__('Delete Kind'), array('action' => 'delete', $kind['Kind']['id']), null, __('Are you sure you want to delete # %s?', $kind['Kind']['id'])); ?> </li>
-		<li><?php echo $this->Html->link(__('List Kinds'), array('action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Kind'), array('action' => 'add')); ?> </li>
-	</ul>
-</div>
+
