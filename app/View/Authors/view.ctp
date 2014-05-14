@@ -1,39 +1,32 @@
-<div class="authors view">
-<h2><?php echo __('Author'); ?></h2>
-	<dl>
-		<dt><?php echo __('Id'); ?></dt>
-		<dd>
-			<?php echo h($author['Author']['id']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Name'); ?></dt>
-		<dd>
-			<?php echo h($author['Author']['name']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('First Name'); ?></dt>
-		<dd>
-			<?php echo h($author['Author']['first_name']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Birthdate'); ?></dt>
-		<dd>
-			<?php echo h($author['Author']['birthdate']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Gender'); ?></dt>
-		<dd>
-			<?php echo h($author['Author']['gender']); ?>
-			&nbsp;
-		</dd>
-	</dl>
+<div class="authors index">
+	<div class="page-header">
+		<h1 class= "center"><?php echo __(h($author['Author']['name'])); echo (' '); echo __(h($author['Author']['first_name']));?></h1>
+	</div>
+	<div class="col-md-12">
+		<img class="col-md-4" style="width:180px; height:230px;" src="<?php echo h($author['Author']['image']); ?>"></img>
+		<div class="col-md-8">
+			<div class = "row">
+				<div class="col-md-3">Nom :</div>
+				<div class="col-md-1"><?php echo h($author['Author']['name']); ?></div>
+			</div>
+			<div class = "row">
+				<div class="col-md-3">Prénom :</div>
+				<div class="col-md-1"><?php echo h($author['Author']['first_name']); ?></div>
+			</div>
+			<div class = "row">
+				<div class="col-md-3">Date de naissance :</div>
+				<div class="col-md-1"><?php echo h($author['Author']['birthdate']); ?>&nbsp;	</div>
+			</div>
+			<div class = "row">
+				<div class="col-md-3">Genre :</div>
+				<?php if($author['Author']['gender'] == 0){?>
+					<div class="col-md-1"><?php echo ('homme'); ?>&nbsp;</div>
+				<?php }
+				else{ ?>
+					<div class="col-md-1"><?php echo ('femme'); ?>&nbsp;</div>
+				<?php } ?>
+			</div>
+		</div>
+	</div>
 </div>
-<div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
-	<ul>
-		<li><?php echo $this->Html->link(__('Edit Author'), array('action' => 'edit', $author['Author']['id'])); ?> </li>
-		<li><?php echo $this->Form->postLink(__('Delete Author'), array('action' => 'delete', $author['Author']['id']), null, __('Are you sure you want to delete # %s?', $author['Author']['id'])); ?> </li>
-		<li><?php echo $this->Html->link(__('List Authors'), array('action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Author'), array('action' => 'add')); ?> </li>
-	</ul>
-</div>
+

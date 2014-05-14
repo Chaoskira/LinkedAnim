@@ -30,6 +30,11 @@
 					array('action' => 'view', 'id' => $manga['Manga']['id']),
 					array('class' => 'btn btn-default btn-sm')
 				); ?>
+				<?php echo $this->Html->link(
+					__('Manga liés'),
+					array('action' => 'top', 'id' => $manga['Manga']['id']),
+					array('class' => 'btn btn-default btn-sm')
+				); ?>
 			</td>
 		</tr>
 		<?php endforeach; ?>

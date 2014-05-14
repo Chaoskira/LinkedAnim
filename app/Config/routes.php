@@ -18,4 +18,7 @@
  */
 	Router::connect('/', array('controller' => 'mangas', 'action' => 'index'));
 	Router::connect('/:controller/:id',			array('action' => 'view'), array('pass' => array('id'), 'id' => '[0-9]+'));
+	Router::connect('/:controller/:action/:id',			array('action' => 'top'), array('pass' => array('id'), 'id' => '[0-9]+'));
+	
+	Router::connect('/:controller/:action',		array());
 
