@@ -116,10 +116,19 @@ class MangasController extends AppController {
 		return $this->redirect(array('action' => 'index'));
 	}
 	
-	
-	
-	
-	
-	public function genre($id){
-		return $this->Kind->find('first', array('conditions'=>array('kinds_id'=>$id)));
-	}}
+	public function top($id = null) {
+		if (!$this->Manga->exists($id)) {
+			throw new NotFoundException(__('Invalid manga'));
+		}
+		else {
+			$this->loadModel('Link');
+			$options = array(
+				'conditions' => array('Link.mangas_id' => $id),
+				'order' => 'number DESC'
+			);
+			$this->set('links', $this->Link->find('all', $options));
+			$this->set('link', $this->Paginator->paginate());
+		}
+	}
+}
+
