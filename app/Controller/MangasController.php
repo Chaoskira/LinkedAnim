@@ -119,8 +119,7 @@ class MangasController extends AppController {
 	public function top($id = null) {
 		if (!$this->Manga->exists($id)) {
 			throw new NotFoundException(__('Invalid manga'));
-		}
-		else {
+		} else {
 			$this->loadModel('Link');
 			$options = array(
 				'conditions' => array('Link.mangas_id' => $id),
