@@ -19,11 +19,69 @@
 					<td class = "center"><?php echo h($link['Mangas2']['name']); ?>&nbsp;</td>
 					<td class = "center"><?php echo h($link['Mangas2']['origin_name']); ?>&nbsp;</td>
 					<td class = "center">
-						<?php echo h($link['Mangas2']['types_id']); ?>&nbsp;
+						<?php
+							if($link['Mangas2']['types_id'] == 1)
+							{
+								echo "Shonen";
+							}
+							else if($link['Mangas2']['types_id'] == 2)
+							{
+								echo "Shojo";
+							}
+							else if($link['Mangas2']['types_id'] == 3)
+							{
+								echo "Sheinen";
+							}
+						?>&nbsp;
 					</td>
-					<td class = "center"><?php echo h($link['Mangas2']['kinds_id']); ?>&nbsp;</td>
-					<td class = "center"><?php echo h($link['Mangas2']['kid']); ?>&nbsp;</td>
-					<td class = "center"><?php echo h($link['Mangas2']['kids']); ?>&nbsp;</td>
+					<td class = "center">
+						<?php
+							if($link['Mangas2']['kinds_id'] == 1)
+							{
+								echo "Comédie";
+							}
+							else if($link['Mangas2']['kinds_id'] == 2)
+							{
+								echo "Nekketsu";
+							}
+							else if($link['Mangas2']['kinds_id'] == 3)
+							{
+								echo "Fantasy";
+							}
+						?>&nbsp;
+					</td>
+					<td class = "center">
+						<?php
+							if($link['Mangas2']['kid'] == 1)
+							{
+								echo "Comédie";
+							}
+							else if($link['Mangas2']['kid'] == 2)
+							{
+								echo "Nekketsu";
+							}
+							else if($link['Mangas2']['kid'] == 3)
+							{
+								echo "Fantasy";
+							}
+						?>&nbsp;
+					</td>
+					<td class = "center">
+						<?php
+							if($link['Mangas2']['kids'] == 1)
+							{
+								echo "Comédie";
+							}
+							else if($link['Mangas2']['kids'] == 2)
+							{
+								echo "Nekketsu";
+							}
+							else if($link['Mangas2']['kids'] == 3)
+							{
+								echo "Fantasy";
+							}
+						?>&nbsp;
+					</td>
 					<td class="actions center">
 						<?php echo $this->Html->link(
 							__('View'),
@@ -39,14 +97,4 @@
 				</tr>
 			<?php endforeach; ?>
 		</table>
-		<div>
-			<p> Type = 1 : Shonen </p>
-			<p> Type = 2 : Shojo </p>
-			<p> Type = 3 : Seinen </p>
-		</div>
-		<div style = "text-align : right; margin-top : -100px;">
-			<p> Genre = 1 : Comédie </p>
-			<p> Genre = 2 : Nekketsu </p>
-			<p> Genre = 3 : Fantasy </p>
-		</div>
 </div>
