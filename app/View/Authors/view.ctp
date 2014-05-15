@@ -15,7 +15,12 @@
 			</div>
 			<div class = "row">
 				<div class="col-md-3">Date de naissance :</div>
-				<div class="col-md-1"><?php echo h($author['Author']['birthdate']); ?>&nbsp;	</div>
+				<?php if($author['Author']['birthdate'] == "0000-00-00"){?>
+					<div class="col-md-1"><?php echo ('N/A'); ?>&nbsp;</div>
+				<?php }
+				else{ ?>
+					<div class="col-md-1"><?php echo h($author['Author']['birthdate']); ?>&nbsp;</div>
+				<?php } ?>
 			</div>
 			<div class = "row">
 				<div class="col-md-3">Genre :</div>
